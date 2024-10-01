@@ -1,11 +1,10 @@
 #include <stdio.h> 
 
-  int main()
-{
+  int main(){
    
-    double principle ;
-    double time ;
-    double rate ;
+    double principle;
+    double time;
+    double rate;
     
     printf("Enter principle:");
     scanf("%lf", &principle);
@@ -16,7 +15,7 @@
     printf("Enter the rate:");
     scanf("%lf",&rate);
     
-     double simpleInterest ;
+    double simpleInterest;
    
     simpleInterest = (principle*time*rate)/100;
     printf("The simpleIntrest is %.2lf", simpleInterest);
