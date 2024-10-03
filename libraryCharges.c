@@ -5,9 +5,8 @@ int main (){
     
     printf("Hi there, welcome to BETA LIBRARY\n");
     
-    int bookID ;
-    int dueDate ;
-    int returnDate ;
+    int bookID ,dueDate , returnDate ,daysOverdue;
+    double fineRate , fineAmount; 
     
     printf("Please enter your Book ID:");
     scanf("%d",&bookID);
@@ -17,34 +16,41 @@ int main (){
     
     printf("Enter Return Date:");
     scanf("%d",& returnDate);
-    
-    int daysOverdue ;
-    double fine ; 
+ 
      
     if (returnDate > dueDate ){
          daysOverdue= returnDate - dueDate ;
-           printf("Your days overdue are %d\n",daysOverdue);
+         printf("Your days overdue are %d\n",daysOverdue);
      }
      
-        else if (returnDate < dueDate){
+         else if (returnDate < dueDate){
          printf ("Book returned on time \n");
     }
-    
+   
        if (daysOverdue >=1 && daysOverdue<=7) { 
-        fine= daysOverdue * 20;
-      printf("Your charges are %.2lf\n",fine);
+          fineRate=20;
+          fineAmount= daysOverdue * fineRate;
+      
     
     }
     else if ( daysOverdue >=8 && daysOverdue<= 14) {
-        fine = daysOverdue * 50;
-         printf("Your charges are %.2lf\n",fine);
+           fineRate= 50;
+           fineAmount = daysOverdue * fineRate;
+         
         
     }
     else if (daysOverdue >= 15){
-        fine = daysOverdue * 100;
-        printf("Your charges are %.2lf\n",fine);
+          fineRate=100;
+          fineAmount = daysOverdue * fineRate;
+        
     }
     
+    printf("Book ID is %d\n",bookID);
+    printf("Your due date is %d\n",dueDate);
+    printf("Your return date is %d\n",returnDate);
+    printf("Your days overdue are %d\n",daysOverdue);
+    printf("Fine rate is %.2lf\n",fineRate);
+    printf("Your fine amount is %.2lf\n",fineAmount);
     printf("Thank you for choosing BETA LIBRARY\n ");
     printf("Come back soon.");
     
