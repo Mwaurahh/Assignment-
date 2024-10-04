@@ -23,7 +23,7 @@ int main (){
          printf("Your days overdue are %d\n",daysOverdue);
      }
      
-         else if (returnDate < dueDate){
+         else {
          printf ("Book returned on time \n");
     }
    
